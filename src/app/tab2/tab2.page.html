@@ -1,9 +1,21 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-title>
-      Tab Two
+      <h1>Vocales</h1>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content color="primary">
+    <ion-grid>
+        <ion-row>
+          <ion-col size='6' *ngFor = "let voc of vocales">
+                <ion-card (click)="reproducir(voc)" color="success">
+                    <ion-card-content>
+                      <ion-img [src]="voc.ruta"></ion-img>
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>

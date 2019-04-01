@@ -1,9 +1,21 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="danger">
     <ion-title>
-      Tab Three
+      <h1>Colores</h1> 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content color="primary">
+    <ion-grid>
+        <ion-row>
+          <ion-col size='6' *ngFor = "let col of colores">
+                <ion-card (click)="reproducir(col)"  color="danger">
+                    <ion-card-content>
+                      <ion-img [src]="col.ruta"></ion-img>
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>
